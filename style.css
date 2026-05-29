@@ -294,6 +294,27 @@ body {
   font-size: 14px;
 }
 
+.placeholder-image {
+  min-height: 210px;
+  background: linear-gradient(135deg, #e8eef8, #f7f9fc);
+  border: 2px dashed #9aabc7;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #4b638f;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.placeholder-image:hover {
+  background: #e8eef8;
+  transform: scale(1.02);
+  transition: 0.25s;
+}
+
 /* =========================
    MINI PROJECTS
 ========================= */
