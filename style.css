@@ -277,6 +277,23 @@ body {
   line-height: 1.7;
 }
 
+.project-summary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.project-summary span {
+  background: #e8eef8;
+  color: #263b5e;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 /* =========================
    MINI PROJECTS
 ========================= */
