@@ -4,16 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Contact | Collin Credo</title>
-
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
   <nav class="navbar">
-
     <div class="nav-left">
       <a href="/index.html">Home</a>
       <a href="/projects.html">Projects</a>
@@ -22,39 +19,53 @@
       <a href="/contact.html">Contact</a>
     </div>
 
-    <div class="logo">
-      Contact
-    </div>
-
+    <div class="logo">Contact</div>
   </nav>
 
-  <section class="section contact-cta">
+  <section class="contact-page">
 
-    <h2>Get In Touch</h2>
+    <div class="contact-form-section">
 
-    <p>
-      Feel free to reach out regarding engineering opportunities,
-      projects, collaborations, or networking.
-    </p>
+      <h1>Let's Talk</h1>
 
-    <div class="button-group">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-      <a class="main-button"
-         href="mailto:cgcredo@ucdavis.edu">
-        EMAIL ME
+        <label for="name">Your Name <span>*</span></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message <span>*</span></label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+
+      </form>
+
+    </div>
+
+    <div class="contact-info-section">
+
+      <h1>Contact Info</h1>
+
+      <a class="contact-icon" href="https://www.linkedin.com/" target="_blank">
+        in
       </a>
 
-      <a class="main-button secondary"
-         href="https://www.linkedin.com/"
-         target="_blank">
-        LINKEDIN
-      </a>
+      <div class="contact-detail">
+        <h3>Email Me</h3>
+        <p>
+          <a href="mailto:cgcredo@ucdavis.edu">cgcredo@ucdavis.edu</a>
+        </p>
+      </div>
 
-      <a class="main-button"
-         href="https://calendly.com/"
-         target="_blank">
-        SCHEDULE A MEETING
-      </a>
+      <div class="contact-detail">
+        <h3>Schedule a Meeting</h3>
+        <p>
+          <a href="https://calendly.com/" target="_blank">Calendly</a>
+        </p>
+      </div>
 
     </div>
 
