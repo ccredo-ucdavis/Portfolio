@@ -511,18 +511,20 @@ body {
   color: #152238;
 }
 
+/* NEW: The wrapper container holding the card & standalone image side-by-side */
+.about-top-container {
+  display: flex;
+  gap: 40px;          /* Gap between the text card and your image */
+  align-items: center;
+  margin-bottom: 50px; /* THIS ADDS THE GAP ABOVE "BEYOND ENGINEERING" */
+}
+
 .about-card {
   background: white;
   border-radius: 24px;
   padding: 45px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-}
-
-.about-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  align-items: center;
+  flex: 2;            /* Allocates more horizontal space to the text card */
 }
 
 .about-text p {
@@ -532,38 +534,44 @@ body {
   line-height: 1.8;
 }
 
-.about-side-image {
+/* Removes the final paragraph's bottom margin to keep card padding perfect */
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* NEW: Image wrapper container outside of the card */
+.about-standalone-image {
+  flex: 1;            /* Allocates proportioned space for a larger image */
   display: flex;
   justify-content: center;
 }
 
-.about-side-image img {
+/* Enlarged styling for your photo */
+.about-standalone-image img {
   width: 100%;
-  max-width: 380px;
-
+  max-width: 480px;   /* Increased from 380px to let the image render significantly bigger */
+  height: auto;
   border-radius: 24px;
-
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-
   cursor: pointer;
-  transition: 0.25s;
+  transition: transform 0.25s ease;
 }
 
-.about-side-image img:hover {
+.about-standalone-image img:hover {
   transform: translateY(-4px);
 }
 
+/* Responsiveness: Automatically stacks everything cleanly on tablets and mobile */
 @media (max-width: 900px) {
-
-  .about-layout {
-    grid-template-columns: 1fr;
+  .about-top-container {
+    flex-direction: column-reverse; /* Stacks image nicely below text on smaller screens */
+    gap: 30px;
+    margin-bottom: 40px;
   }
 
-  .about-side-image {
-    max-width: 450px;
-    margin: auto;
+  .about-standalone-image img {
+    max-width: 100%; /* Lets image expand to match card width on mobile */
   }
-
 }
 
 /* =========================
