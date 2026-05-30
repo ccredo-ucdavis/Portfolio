@@ -511,20 +511,12 @@ body {
   color: #152238;
 }
 
-/* NEW: The wrapper container holding the card & standalone image side-by-side */
-.about-top-container {
-  display: flex;
-  gap: 40px;          /* Gap between the text card and your image */
-  align-items: center;
-  margin-bottom: 50px; /* THIS ADDS THE GAP ABOVE "BEYOND ENGINEERING" */
-}
-
 .about-card {
   background: white;
   border-radius: 24px;
   padding: 45px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  flex: 2;            /* Allocates more horizontal space to the text card */
+  margin-bottom: 40px; /* Gap between About card and the image wrapper */
 }
 
 .about-text p {
@@ -534,22 +526,23 @@ body {
   line-height: 1.8;
 }
 
-/* Removes the final paragraph's bottom margin to keep card padding perfect */
 .about-text p:last-child {
   margin-bottom: 0;
 }
 
-/* NEW: Image wrapper container outside of the card */
-.about-standalone-image {
-  flex: 1;            /* Allocates proportioned space for a larger image */
+/* NEW: Middle Image Wrapper to center the image and create section gaps */
+.about-middle-image-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; /* Gap between the image wrapper and Beyond Engineering card */
+  width: 100%;
 }
 
-/* Enlarged styling for your photo */
-.about-standalone-image img {
+/* New sizing rules to make the photo larger and crisp */
+.about-middle-image-wrapper img {
   width: 100%;
-  max-width: 480px;   /* Increased from 380px to let the image render significantly bigger */
+  max-width: 650px; /* Increased max-width to make it prominently bigger */
   height: auto;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
@@ -557,20 +550,23 @@ body {
   transition: transform 0.25s ease;
 }
 
-.about-standalone-image img:hover {
-  transform: translateY(-4px);
+.about-middle-image-wrapper img:hover {
+  transform: scale(1.01) translateY(-4px); /* Clean lift-and-zoom effect on hover */
 }
 
-/* Responsiveness: Automatically stacks everything cleanly on tablets and mobile */
+/* Mobile & Tablet Optimizations */
 @media (max-width: 900px) {
-  .about-top-container {
-    flex-direction: column-reverse; /* Stacks image nicely below text on smaller screens */
-    gap: 30px;
-    margin-bottom: 40px;
+  .about-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .about-card {
+    padding: 30px;
   }
 
-  .about-standalone-image img {
-    max-width: 100%; /* Lets image expand to match card width on mobile */
+  .about-middle-image-wrapper img {
+    max-width: 100%; /* Allows image to fill the screen nicely on mobile devices */
   }
 }
 
