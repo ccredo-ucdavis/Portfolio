@@ -581,10 +581,10 @@ body {
 ========================= */
 
 .footer {
-  margin-top: 100px;
   background: #152238;
   color: white;
-  padding: 30px 40px;
+  padding: 35px 40px;
+  margin-top: 100px;
 }
 
 .footer-content {
@@ -596,9 +596,16 @@ body {
   align-items: center;
 }
 
+.footer-left,
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
 .footer a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
   transition: 0.2s;
 }
 
@@ -607,8 +614,8 @@ body {
 }
 
 .footer-center {
-  font-size: 15px;
-  opacity: 0.85;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 /* Mobile */
@@ -619,6 +626,11 @@ body {
     flex-direction: column;
     gap: 15px;
     text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
   }
 
 }

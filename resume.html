@@ -42,11 +42,7 @@
 
     <br><br>
 
-    <iframe
-      src="/resume.pdf"
-      width="100%"
-      height="900px"
-      style="border:none; border-radius:20px;">
+    <iframe src="/resume.pdf" width="100%" height="900px" style="border:none; border-radius:20px;">
     </iframe>
 
   </section>
@@ -56,24 +52,39 @@
   <div class="footer-content">
 
     <div class="footer-left">
-      <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+
+      <a href="https://linkedin.com/in/collin-credo"
+         target="_blank">
         LinkedIn
       </a>
+
+      <a href="https://github.com/ccredo-ucdavis"
+         target="_blank">
+        GitHub
+      </a>
+
     </div>
 
     <div class="footer-center">
-      <p>Collin Credo © 2026</p>
+      <p>&copy; <span id="year"></span> Collin Credo</p>
     </div>
 
     <div class="footer-right">
+
       <a href="mailto:cgcredo@ucdavis.edu">
         cgcredo@ucdavis.edu
       </a>
+
     </div>
 
   </div>
 
 </footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
 
