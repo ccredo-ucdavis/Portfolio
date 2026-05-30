@@ -68,11 +68,22 @@ body {
 ========================= */
 
 .hero {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 70px;
+
   padding: 120px 80px 60px;
+
+  overflow: hidden;
+}
+
+.hero-image,
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-image img {
@@ -89,14 +100,62 @@ body {
 .hero-content h1 {
   font-size: 58px;
   line-height: 1.08;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   color: #152238;
+}
+
+.hero-content h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #4b638f;
+  margin-bottom: 30px;
 }
 
 .hero-content p {
   font-size: 18px;
   margin-bottom: 20px;
   color: #444;
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO DECORATIONS
+========================= */
+
+.hero-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.curiosity {
+  width: 420px;
+
+  top: 60px;
+  right: 40px;
+
+  opacity: 0.10;
+  filter: grayscale(100%);
+
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Floating animation */
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
 }
 
 /* =========================
