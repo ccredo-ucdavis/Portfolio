@@ -4,16 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>About | Collin Credo</title>
-
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
   <nav class="navbar">
-
     <div class="nav-left">
       <a href="/index.html">Home</a>
       <a href="/projects.html">Projects</a>
@@ -21,19 +18,12 @@
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
     </div>
-
-    <div class="logo">
-      About Me
-    </div>
-
+    <div class="logo">About Me</div>
   </nav>
 
   <section class="section">
-
     <h2>About Me</h2>
-
     <div class="card">
-
       <p>
         Hello! My name is Collin Credo, and I am an Aerospace Engineering student at the University of California, Davis
         with interests in controls engineering, automation, HVAC systems, energy efficiency, and aerospace technologies.
@@ -41,19 +31,14 @@
         controls engineers to analyze building performance, diagnose HVAC system issues, and develop solutions that
         improve energy efficiency across campus facilities.
       </p>
-
       <br>
-
       <p>
-
         My technical experience includes building automation systems, HVAC diagnostics, MATLAB application development,
         experimental data analysis, and engineering problem-solving. Prior to transferring to UC Davis, I earned two
         Associate Degrees from San Joaquin Delta College, which has allowed me to accelerate my academic progress with
         the goal of graduating a year early and pursuing graduate studies.
       </p>
-
       <br>
-
       <p>
         I am particularly interested in the intersection of energy efficiency and emerging technologies. As industries
         such as artificial intelligence continue to drive demand for large-scale computing infrastructure, I believe
@@ -61,117 +46,65 @@
         engineering. In addition to my work in energy engineering, I am involved with the UC Davis chapter of the
         Vertical Flight Society, where I am contributing to a project focused on hybridizing a tiltrotor aircraft.
       </p>
-
     </div>
-
+  </section>
+  <section class="section">
+    <h2>Beyond Engineering</h2>
     <div class="card">
-      <h2>Beyond Engineering</h2>
-
       <p>
         Outside of engineering, I enjoy playing on the worship team for my Christian Fellowship: Catalyst,
         playing the clarinet and bass clarinet for the Video Game Orchestra and UC Davis Concert Band,
-        working on automotive projects like gas efficency mods, exploring and experimenting with different technologies
-        such as
-        mini breadboard projects and writing scripts/plays for UC Davis Philippine Cultural Night.
+        working on automotive projects like gas efficiency mods, exploring and experimenting with different technologies
+        such as mini breadboard projects and writing scripts/plays for UC Davis Philippine Cultural Night.
       </p>
-
     </div>
-
-    <section class="section">
-
-      <h2>Gallery</h2>
-
-      <div class="image-gallery">
-
-          <img src="/images/about-gallery-1.jpeg" 
-          alt="Collin in audio recording booth"
-          onclick="openLightbox(this.src)"> 
-
-          <img src="/images/about-gallery-2.jpeg" 
-          alt="Wildlife photography"
-          onclick="openLightbox(this.src)"> 
-
-          <img src="/images/about-gallery-3.jpeg" 
-          alt="Collin performing on drums for Worship"
-          onclick="openLightbox(this.src)"> 
-
-          <img src="/images/about-gallery-4.jpeg"
-          alt="Temperature Sensor Project at UC Davis" 
-          onclick="openLightbox(this.src)"> 
-
-          <img src="/images/about-gallery-5.jpeg" 
-          alt="California Aerospace Museum" 
-          onclick="openLightbox(this.src)"> 
-
-          <img src="/images/about-gallery-6.JPEG" 
-          alt="Collin performing clarinet" 
-          onclick="openLightbox(this.src)">
-
-      </div>
-
-    </section>
-
   </section>
-
-  <!-- LIGHTBOX -->
-
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img"
-       src=""
-       alt="Expanded image"
-       onclick="event.stopPropagation()">
-</div>
-
-<script>
-  function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").style.display = "flex";
-  }
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-</script>
-
-<footer class="footer">
-
-  <div class="footer-content">
-
-    <div class="footer-left">
-
-      <a href="https://linkedin.com/in/collin-credo"
-         target="_blank">
-        LinkedIn
-      </a>
-
-      <a href="https://github.com/ccredo-ucdavis"
-         target="_blank">
-        GitHub
-      </a>
-
+  <section class="section">
+    <h2>Gallery</h2>
+    <div class="image-gallery">
+      <img src="/images/about-gallery-1.jpeg" alt="Collin in audio recording booth" onclick="openLightbox(this.src)">
+      <img src="/images/about-gallery-2.jpeg" alt="Wildlife photography" onclick="openLightbox(this.src)">
+      <img src="/images/about-gallery-3.jpeg" alt="Collin performing on drums for Worship"
+        onclick="openLightbox(this.src)">
+      <img src="/images/about-gallery-4.jpeg" alt="Temperature Sensor Project at UC Davis"
+        onclick="openLightbox(this.src)">
+      <img src="/images/about-gallery-5.jpeg" alt="California Aerospace Museum" onclick="openLightbox(this.src)">
+      <img src="/images/about-gallery-6.jpeg" alt="Collin performing clarinet" onclick="openLightbox(this.src)">
     </div>
-
-    <div class="footer-center">
-      <p>&copy; <span id="year"></span> Collin Credo</p>
-    </div>
-
-    <div class="footer-right">
-
-      <a href="mailto:cgcredo@ucdavis.edu">
-        cgcredo@ucdavis.edu
-      </a>
-
-    </div>
-
+  </section>
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Expanded image" onclick="event.stopPropagation()">
   </div>
 
-</footer>
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
 
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
 
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <a href="https://linkedin.com/in/collin-credo" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ccredo-ucdavis" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-center">
+        <p>&copy; <span id="year"></span> Collin Credo</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:cgcredo@ucdavis.edu">cgcredo@ucdavis.edu</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 
