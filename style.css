@@ -502,73 +502,60 @@ body {
 }
 
 /* =========================
-   ABOUT PAGE
+   ABOUT
 ========================= */
 
 .about-title {
-  font-size: 48px;
+  font-size: 52px;
+  margin-bottom: 40px;
   color: #152238;
-  margin-bottom: 50px;
 }
 
-.section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 90px 48px 70px;
+.about-card {
+  background: white;
+  border-radius: 24px;
+  padding: 45px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
 }
 
 .about-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: 48px;
-  align-items: start;
-}
-
-.about-text {
-  min-width: 0;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
 
 .about-text p {
-  line-height: 1.7;
-  font-size: 16px;
-}
-
-.about-text h2 {
-  margin-top: 28px;
+  margin-bottom: 22px;
+  font-size: 17px;
+  color: #444;
+  line-height: 1.8;
 }
 
 .about-side-image img {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  max-width: 450px;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: 0.25s;
 }
 
-.card {
-  margin-top: 16px;
-  padding: 28px 32px;
-  border-left: 4px solid #152238;
-  border-radius: 18px;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+.about-side-image img:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 900px) {
-  .section {
-    padding: 80px 24px 60px;
-  }
 
   .about-layout {
     grid-template-columns: 1fr;
   }
 
-  .about-side-image img {
-    height: 420px;
+  .about-side-image {
+    max-width: 450px;
+    margin: auto;
   }
+
 }
 
 .image-gallery {
