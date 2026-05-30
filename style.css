@@ -511,12 +511,20 @@ body {
   color: #152238;
 }
 
+/* NEW: Flex wrapper to align the text card and image side-by-side */
+.about-split-container {
+  display: flex;
+  gap: 40px;            /* Horizontal space between the card and the image */
+  align-items: center;  /* Vertically centers the image relative to the card */
+  margin-bottom: 50px;  /* Clean structural gap above "Beyond Engineering" */
+}
+
 .about-card {
   background: white;
   border-radius: 24px;
   padding: 45px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  margin-bottom: 40px; /* Gap between About card and the image wrapper */
+  flex: 1.8;            /* Gives the text card more proportional breathing room */
 }
 
 .about-text p {
@@ -530,19 +538,16 @@ body {
   margin-bottom: 0;
 }
 
-/* NEW: Middle Image Wrapper to center the image and create section gaps */
-.about-middle-image-wrapper {
+/* NEW: Independent wrapper for your side image */
+.about-side-image-wrapper {
+  flex: 1.2;            /* Allocates a wider footprint so the photo displays larger */
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 40px; /* Gap between the image wrapper and Beyond Engineering card */
-  width: 100%;
 }
 
-/* New sizing rules to make the photo larger and crisp */
-.about-middle-image-wrapper img {
+.about-side-image-wrapper img {
   width: 100%;
-  max-width: 650px; /* Increased max-width to make it prominently bigger */
+  max-width: 480px;     /* Keeps the image large and crisp without pushing layout boundaries */
   height: auto;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
@@ -550,23 +555,24 @@ body {
   transition: transform 0.25s ease;
 }
 
-.about-middle-image-wrapper img:hover {
-  transform: scale(1.01) translateY(-4px); /* Clean lift-and-zoom effect on hover */
+.about-side-image-wrapper img:hover {
+  transform: translateY(-4px);
 }
 
-/* Mobile & Tablet Optimizations */
-@media (max-width: 900px) {
-  .about-title {
-    font-size: 40px;
-    margin-bottom: 30px;
+/* Responsive Handling for Mobile & Tablets */
+@media (max-width: 950px) {
+  .about-split-container {
+    flex-direction: column; /* Stacks image neatly below the text block on smaller device viewports */
+    gap: 30px;
+    margin-bottom: 40px;
   }
-  
+
   .about-card {
     padding: 30px;
   }
 
-  .about-middle-image-wrapper img {
-    max-width: 100%; /* Allows image to fill the screen nicely on mobile devices */
+  .about-side-image-wrapper img {
+    max-width: 100%;       /* Allows photo to elegantly expand to full width on mobile screens */
   }
 }
 
