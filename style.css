@@ -131,8 +131,8 @@ body {
 .curiosity {
   width: 380px;
 
-  top: 60px;
-  right: 40px;
+  top: 80px;
+  right: 50px;
 
   opacity: 0.10;
   filter: grayscale(100%);
