@@ -576,6 +576,28 @@ body {
   }
 }
 
+/* Styling for the new image added to the top of your bio text */
+.about-top-image-wrapper {
+  width: 100%;
+  margin-bottom: 25px; /* Adds a clean gap between the new photo and your "Hello!" paragraph */
+  display: flex;
+  justify-content: flex-start; /* Aligns the image to the left; change to 'center' if preferred */
+}
+
+.about-top-image-wrapper img {
+  width: 100%;
+  max-width: 550px;    /* Controls how wide you want this new top photo to be */
+  height: auto;
+  border-radius: 16px; /* Matches the clean rounded look of your site */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.about-top-image-wrapper img:hover {
+  transform: translateY(-2px);
+}
+
 /* =========================
    ABOUT IMAGE GALLERY
 ========================= */
